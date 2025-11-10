@@ -3,33 +3,36 @@ export default function RoadmapSection() {
     {
       number: "BUỔI 1",
       title: "VƯỢT RÀO CẢN TÂM LÝ, XÂY NỀN TẢNG VỮNG CHẮC",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/86b8ce5807224bb4460cfd4d8c014fe3d29fca45?width=802",
+      image:
+        "https://api.builder.io/api/v1/image/assets/TEMP/86b8ce5807224bb4460cfd4d8c014fe3d29fca45?width=802",
       points: [
         "Phân tích tổng quan về thị trường BĐS, đưa ra một số dự báo về diễn biến tương lai dựa trên chu kỳ kinh tế và chu kỳ BĐS",
         "Khai vấn để hiểu về những rào cản tâm lý, những niềm tin giới hạn của bạn, qua đó đưa ra góc nhìn để kiểm soát nỗi lo đó",
-        "Lập checklist đầy đủ cho lộ trình mua nhà từ A-Z"
-      ]
+        "Lập checklist đầy đủ cho lộ trình mua nhà từ A-Z",
+      ],
     },
     {
       number: "BUỔI 2",
       title: "THIẾT KẾ LỘ TRÌNH HÀNH ĐỘNG CÁ NHÂN HOÁ",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/1c31b7ac79957e72130ad76dcdde7189334fd7c1?width=802",
+      image:
+        "https://api.builder.io/api/v1/image/assets/TEMP/1c31b7ac79957e72130ad76dcdde7189334fd7c1?width=802",
       points: [
         "Hiểu về căn nhà mơ ước và khả năng tài chính, tiềm năng tài chính của bạn",
         "Xây dựng kế hoạch tích luỹ tài chính, bao gồm đầy đủ dự phòng, bảo vệ, tích luỹ an toàn và tích luỹ tăng trưởng",
-        "Giải mã các bẫy pháp lý, bẫy vay nợ, bẫy tư vấn bất động sản thường gặp trong quá trình mua nhà"
-      ]
+        "Giải mã các bẫy pháp lý, bẫy vay nợ, bẫy tư vấn bất động sản thường gặp trong quá trình mua nhà",
+      ],
     },
     {
       number: "BUỔI 3",
       title: "TỐI ƯU TÍCH LUỸ VÀ GIẢI ĐÁP CÁ NHÂN",
-      image: "https://api.builder.io/api/v1/image/assets/TEMP/717182a17d7330495933557a5714bcfd03f2a841?width=802",
+      image:
+        "https://api.builder.io/api/v1/image/assets/TEMP/717182a17d7330495933557a5714bcfd03f2a841?width=802",
       points: [
         "Điều chỉnh kế hoạch tích luỹ dựa trên sự thay đổi tình hình tài chính của riêng bạn (nếu có)",
         "Đề xuất phân bố danh mục đầu tư để phù hợp với tình hình thị trư���ng tài chính, đảm bảo tối đa hiệu suất sinh lời",
-        "Cá nhân hoá tư vấn, giải đáp các thắc mắc của bạn về hành trình mua nhà"
-      ]
-    }
+        "Cá nhân hoá tư vấn, giải đáp các thắc mắc của bạn về hành trình mua nhà",
+      ],
+    },
   ];
 
   return (
@@ -51,10 +54,7 @@ export default function RoadmapSection() {
 
         <div className="space-y-8 lg:space-y-12">
           {sessions.map((session, index) => (
-            <div
-              key={index}
-              className="bg-teal rounded-xl p-6 lg:p-8"
-            >
+            <div key={index} className="bg-teal rounded-xl p-6 lg:p-8">
               <div className="grid lg:grid-cols-[400px_1fr] gap-6 lg:gap-10 items-center">
                 <img
                   src={session.image}

@@ -18,7 +18,10 @@ export default function FreeGiftSection() {
           </div>
 
           <p className="text-lg text-white/90 max-w-4xl mx-auto">
-            Đây là cơ hội để bạn tự mình kiểm chứng năng lực và tư duy phân tích thị trường của các chuyên gia Finful trước khi đưa ra bất kỳ quyết định nào. Chúng tôi tin rằng giá trị bạn nhận được sẽ là câu trả lời rõ ràng nhất.
+            Đây là cơ hội để bạn tự mình kiểm chứng năng lực và tư duy phân tích
+            thị trường của các chuyên gia Finful trước khi đưa ra bất kỳ quyết
+            định nào. Chúng tôi tin rằng giá trị bạn nhận được sẽ là câu trả lời
+            rõ ràng nhất.
           </p>
 
           <button className="px-12 lg:px-16 py-4 lg:py-5 bg-teal hover:bg-teal-dark transition-colors text-white text-xl lg:text-2xl font-medium rounded-full">

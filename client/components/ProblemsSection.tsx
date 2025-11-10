@@ -2,20 +2,24 @@ export default function ProblemsSection() {
   const problems = [
     {
       title: "Khao khát an cư, nhưng sức mình có hạn",
-      description: "Bạn làm việc chăm chỉ, nhưng giá nhà cứ luôn tăng nhanh hơn tốc độ tăng lương của bạn"
+      description:
+        "Bạn làm việc chăm chỉ, nhưng giá nhà cứ luôn tăng nhanh hơn tốc độ tăng lương của bạn",
     },
     {
       title: "Sắp đón thành viên mới, nỗi lo nhân đôi",
-      description: "Niềm vui lập gia đình, sinh con cũng đi kèm nỗi lo, bạn khao khát một tổ ấm cho mình và người thân yêu"
+      description:
+        "Niềm vui lập gia đình, sinh con cũng đi kèm nỗi lo, bạn khao khát một tổ ấm cho mình và người thân yêu",
     },
     {
       title: "Áp lực vô hình từ bạn bè, gia đình",
-      description: "Những bài viết khoe sổ đỏ, những câu hỏi \"Đã có nhà chưa\" khiến bạn cảm thấy vô cùng nặng nề"
+      description:
+        'Những bài viết khoe sổ đỏ, những câu hỏi "Đã có nhà chưa" khiến bạn cảm thấy vô cùng nặng nề',
     },
     {
       title: "Bế tắc trước ma trận thông tin",
-      description: "Bạn sợ vay nợ quá sức, sợ mua phải căn nhà pháp lý không rõ ràng, sợ bị môi giới \"dắt mũi\"..."
-    }
+      description:
+        'Bạn sợ vay nợ quá sức, sợ mua phải căn nhà pháp lý không rõ ràng, sợ bị môi giới "dắt mũi"...',
+    },
   ];
 
   return (

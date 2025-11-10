@@ -4,7 +4,7 @@ export default function Footer() {
     "Đồng hành và Tư vấn Mua nhà",
     "Đồng hành và Tư vấn Đầu tư",
     "Thư viện tài chính cá nhân",
-    "Thư viện phân tích chứng khoán"
+    "Thư viện phân tích chứng khoán",
   ];
   const organizationLinks = ["Thiết kế nội dung giáo dục tài chính"];
 
@@ -15,7 +15,7 @@ export default function Footer() {
     "https://api.builder.io/api/v1/image/assets/TEMP/18fb354d253629bdc75cc1e06adafc5b91895df3?width=176",
     "https://api.builder.io/api/v1/image/assets/TEMP/43554eaa52abafdda503c401a53db18ae381d05b?width=140",
     "https://api.builder.io/api/v1/image/assets/TEMP/259ee83e382e78b873732e1e75a1890e8d55d42f?width=644",
-    "https://api.builder.io/api/v1/image/assets/TEMP/e23d3b793ab38f00278a9090597e2b9d1ff69b3a?width=354"
+    "https://api.builder.io/api/v1/image/assets/TEMP/e23d3b793ab38f00278a9090597e2b9d1ff69b3a?width=354",
   ];
 
   return (
@@ -91,7 +91,10 @@ export default function Footer() {
               <ul className="space-y-2.5">
                 {companyLinks.map((link, index) => (
                   <li key={index}>
-                    <a href="#" className="text-sm hover:text-teal transition-colors">
+                    <a
+                      href="#"
+                      className="text-sm hover:text-teal transition-colors"
+                    >
                       {link}
                     </a>
                   </li>
@@ -101,11 +104,16 @@ export default function Footer() {
 
             {/* Individual Services */}
             <div className="space-y-4">
-              <h4 className="text-[15px] font-bold text-white/70">DÀNH CHO CÁ NHÂN</h4>
+              <h4 className="text-[15px] font-bold text-white/70">
+                DÀNH CHO CÁ NHÂN
+              </h4>
               <ul className="space-y-2.5">
                 {individualLinks.map((link, index) => (
                   <li key={index}>
-                    <a href="#" className="text-sm hover:text-teal transition-colors">
+                    <a
+                      href="#"
+                      className="text-sm hover:text-teal transition-colors"
+                    >
                       {link}
                     </a>
                   </li>
@@ -115,11 +123,16 @@ export default function Footer() {
 
             {/* Organization Services */}
             <div className="space-y-4">
-              <h4 className="text-[15px] font-bold text-white/70">DÀNH CHO TỔ CHỨC</h4>
+              <h4 className="text-[15px] font-bold text-white/70">
+                DÀNH CHO TỔ CHỨC
+              </h4>
               <ul className="space-y-2">
                 {organizationLinks.map((link, index) => (
                   <li key={index}>
-                    <a href="#" className="text-sm hover:text-teal transition-colors">
+                    <a
+                      href="#"
+                      className="text-sm hover:text-teal transition-colors"
+                    >
                       {link}
                     </a>
                   </li>

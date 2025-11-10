@@ -35,7 +35,9 @@ export default function WhatYouSeekSection() {
                   Nền tảng vững chắc cho gia đình
                 </h3>
                 <p className="text-lg text-white -tracking-tight">
-                  Nơi bạn tự tin xây dựng gia đình, mang lại cho con cái một môi trường phát triển ổn định mà không còn phải nơm nớp lo chuyện dọn nhà, chuyển trọ.
+                  Nơi bạn tự tin xây dựng gia đình, mang lại cho con cái một môi
+                  trường phát triển ổn định mà không còn phải nơm nớp lo chuyện
+                  dọn nhà, chuyển trọ.
                 </p>
               </div>
             </div>
@@ -55,7 +57,8 @@ export default function WhatYouSeekSection() {
                     Lời khẳng định bản thân
                   </h3>
                   <p className="text-base lg:text-lg text-white -tracking-tight">
-                    Câu trả lời đanh thép cho những năm tháng nỗ lực, sự công nhận xứng đáng trong mắt bạn bè, người thân.
+                    Câu trả lời đanh thép cho những năm tháng nỗ lực, sự công
+                    nhận xứng đáng trong mắt bạn bè, người thân.
                   </p>
                 </div>
               </div>
@@ -74,7 +77,8 @@ export default function WhatYouSeekSection() {
                     Cảm giác an toàn
                   </h3>
                   <p className="text-base lg:text-lg text-white -tracking-tight">
-                    Biết rằng mình đang trả tiền cho tài sản của chính mình, chứ không phải "đốt tiền" thuê nhà hàng tháng.
+                    Biết rằng mình đang trả tiền cho tài sản của chính mình, chứ
+                    không phải "đốt tiền" thuê nhà hàng tháng.
                   </p>
                 </div>
               </div>

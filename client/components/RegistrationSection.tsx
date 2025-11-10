@@ -4,10 +4,11 @@ export default function RegistrationSection() {
       <div className="max-w-[1349px] mx-auto px-4 sm:px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left: Payment Info */}
-          <div 
+          <div
             className="bg-cover bg-center rounded-lg p-8 lg:p-12"
             style={{
-              backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/4c0fbe6861e7a9c325a2c313538259c0acf70158?width=1040')"
+              backgroundImage:
+                "url('https://api.builder.io/api/v1/image/assets/TEMP/4c0fbe6861e7a9c325a2c313538259c0acf70158?width=1040')",
             }}
           >
             <div className="space-y-8">
@@ -19,16 +20,22 @@ export default function RegistrationSection() {
                 />
                 <div className="space-y-1.5 text-white">
                   <p className="text-lg">
-                    Nhân hàng: <span className="font-medium">Ngân hàng Quân đội (MB)</span>
+                    Nhân hàng:{" "}
+                    <span className="font-medium">Ngân hàng Quân đội (MB)</span>
                   </p>
                   <p className="text-lg">
-                    Chủ tài khoản: <span className="font-medium">CONG TY CO PHAN FINFUL</span>
+                    Chủ tài khoản:{" "}
+                    <span className="font-medium">CONG TY CO PHAN FINFUL</span>
                   </p>
                   <p className="text-lg">
-                    Số tài khoản: <span className="font-medium">9602345678</span>
+                    Số tài khoản:{" "}
+                    <span className="font-medium">9602345678</span>
                   </p>
                   <p className="text-lg">
-                    Nội dung: <span className="font-medium">Loại vé - Họ tên - Số điện thoại</span>
+                    Nội dung:{" "}
+                    <span className="font-medium">
+                      Loại vé - Họ tên - Số điện thoại
+                    </span>
                   </p>
                 </div>
               </div>
@@ -42,7 +49,8 @@ export default function RegistrationSection() {
                     className="w-5 h-5 flex-shrink-0 mt-0.5"
                   />
                   <p className="text-[15px] text-white">
-                    Mọi thông tin cá nhân của Quý khách đều được bảo mật bởi Finful. Tham khảo Điều khoản bảo mật thông tin tại đây.
+                    Mọi thông tin cá nhân của Quý khách đều được bảo mật bởi
+                    Finful. Tham khảo Điều khoản bảo mật thông tin tại đây.
                   </p>
                 </div>
               </div>
@@ -57,7 +65,8 @@ export default function RegistrationSection() {
                   Thông tin đăng ký
                 </h3>
                 <p className="text-base text-[#616265]">
-                  Vui lòng hoàn tất các thông tin dưới đây. Chúng tôi sẽ liên hệ để đặt lịch với Quý khách trong vòng 24 giờ tiếp theo.
+                  Vui lòng hoàn tất các thông tin dưới đây. Chúng tôi sẽ liên hệ
+                  để đặt lịch với Quý khách trong vòng 24 giờ tiếp theo.
                 </p>
               </div>
 
@@ -94,8 +103,11 @@ export default function RegistrationSection() {
                       <option>Vé thường</option>
                       <option>Vé VIP</option>
                     </select>
-                    <svg className="absolute right-3 top-1/2 -translate-y-1/2 w-3 h-3 fill-[#333] pointer-events-none" viewBox="0 0 10 9">
-                      <path d="M4.94318 8.25L-0.00110563 -1.06691e-07L9.88746 8.77543e-07L4.94318 8.25Z"/>
+                    <svg
+                      className="absolute right-3 top-1/2 -translate-y-1/2 w-3 h-3 fill-[#333] pointer-events-none"
+                      viewBox="0 0 10 9"
+                    >
+                      <path d="M4.94318 8.25L-0.00110563 -1.06691e-07L9.88746 8.77543e-07L4.94318 8.25Z" />
                     </svg>
                   </div>
                 </div>

@@ -117,8 +117,10 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       backgroundImage: {
-        'gradient-teal': 'linear-gradient(90deg, #7FD5DB 0%, #00ACB8 50%, #008993 100%)',
-        'gradient-teal-vertical': 'linear-gradient(270deg, #00ACB8 0%, #7FD5DB 45.67%, #00ACB8 100%)',
+        "gradient-teal":
+          "linear-gradient(90deg, #7FD5DB 0%, #00ACB8 50%, #008993 100%)",
+        "gradient-teal-vertical":
+          "linear-gradient(270deg, #00ACB8 0%, #7FD5DB 45.67%, #00ACB8 100%)",
       },
     },
   },

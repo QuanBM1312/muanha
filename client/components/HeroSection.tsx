@@ -5,12 +5,12 @@ export default function HeroSection() {
     days: 5,
     hours: 10,
     minutes: 6,
-    seconds: 9
+    seconds: 9,
   });
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft(prev => {
+      setTimeLeft((prev) => {
         if (prev.seconds > 0) {
           return { ...prev, seconds: prev.seconds - 1 };
         } else if (prev.minutes > 0) {
@@ -18,7 +18,13 @@ export default function HeroSection() {
         } else if (prev.hours > 0) {
           return { ...prev, hours: prev.hours - 1, minutes: 59, seconds: 59 };
         } else if (prev.days > 0) {
-          return { ...prev, days: prev.days - 1, hours: 23, minutes: 59, seconds: 59 };
+          return {
+            ...prev,
+            days: prev.days - 1,
+            hours: 23,
+            minutes: 59,
+            seconds: 59,
+          };
         }
         return prev;
       });
@@ -31,25 +37,50 @@ export default function HeroSection() {
     <section className="relative w-full min-h-[784px] bg-[#E2F6FC] overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1349 784" fill="none" preserveAspectRatio="xMidYMid slice">
+        <svg
+          className="absolute inset-0 w-full h-full"
+          viewBox="0 0 1349 784"
+          fill="none"
+          preserveAspectRatio="xMidYMid slice"
+        >
           <defs>
-            <linearGradient id="paint0_linear" x1="949.614" y1="432.457" x2="1106.3" y2="885.868" gradientUnits="userSpaceOnUse">
-              <stop stopColor="#CCEEF0"/>
-              <stop offset="1" stopColor="#E5F6F7"/>
+            <linearGradient
+              id="paint0_linear"
+              x1="949.614"
+              y1="432.457"
+              x2="1106.3"
+              y2="885.868"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stopColor="#CCEEF0" />
+              <stop offset="1" stopColor="#E5F6F7" />
             </linearGradient>
-            <radialGradient id="paint1_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(988.479 739.725) rotate(-66.192) scale(350.56)">
-              <stop offset="0.275818" stopColor="#00ACB8"/>
-              <stop offset="0.588601" stopColor="#CCEEF0"/>
-              <stop offset="0.754773" stopColor="#66CDD4"/>
-              <stop offset="0.962057" stopColor="#F4F7FF"/>
+            <radialGradient
+              id="paint1_radial"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(988.479 739.725) rotate(-66.192) scale(350.56)"
+            >
+              <stop offset="0.275818" stopColor="#00ACB8" />
+              <stop offset="0.588601" stopColor="#CCEEF0" />
+              <stop offset="0.754773" stopColor="#66CDD4" />
+              <stop offset="0.962057" stopColor="#F4F7FF" />
             </radialGradient>
           </defs>
-          <path d="M1349 0H0V799H1349V0Z" fill="#E2F6FC"/>
+          <path d="M1349 0H0V799H1349V0Z" fill="#E2F6FC" />
           <g filter="url(#filter0_f)">
-            <path d="M866.702 458.522C711.641 525.777 640.461 705.999 707.716 861.06C774.971 1016.12 955.193 1087.3 1110.25 1020.05C1265.31 952.791 1336.49 772.568 1269.24 617.508C1201.98 462.447 1021.76 391.267 866.702 458.522Z" fill="url(#paint0_linear)"/>
+            <path
+              d="M866.702 458.522C711.641 525.777 640.461 705.999 707.716 861.06C774.971 1016.12 955.193 1087.3 1110.25 1020.05C1265.31 952.791 1336.49 772.568 1269.24 617.508C1201.98 462.447 1021.76 391.267 866.702 458.522Z"
+              fill="url(#paint0_linear)"
+            />
           </g>
           <g filter="url(#filter1_f)">
-            <path d="M911.707 452.125C752.87 494.525 658.479 657.66 700.879 816.497C743.279 975.334 906.414 1069.73 1065.25 1027.33C1224.09 984.926 1318.48 821.791 1276.08 662.953C1233.68 504.116 1070.54 409.725 911.707 452.125Z" fill="url(#paint1_radial)"/>
+            <path
+              d="M911.707 452.125C752.87 494.525 658.479 657.66 700.879 816.497C743.279 975.334 906.414 1069.73 1065.25 1027.33C1224.09 984.926 1318.48 821.791 1276.08 662.953C1233.68 504.116 1070.54 409.725 911.707 452.125Z"
+              fill="url(#paint1_radial)"
+            />
           </g>
         </svg>
       </div>
@@ -134,22 +165,22 @@ export default function HeroSection() {
               <div className="flex items-center justify-center gap-2 lg:gap-3 mb-6">
                 <div className="bg-cyan-light p-3 lg:p-4 rounded">
                   <p className="text-2xl lg:text-3xl font-semibold text-dark -tracking-wider">
-                    {String(timeLeft.days).padStart(2, '0')}
+                    {String(timeLeft.days).padStart(2, "0")}
                   </p>
                 </div>
                 <div className="bg-cyan-light p-3 lg:p-4 rounded">
                   <p className="text-2xl lg:text-3xl font-semibold text-dark -tracking-wider">
-                    {String(timeLeft.hours).padStart(2, '0')}
+                    {String(timeLeft.hours).padStart(2, "0")}
                   </p>
                 </div>
                 <div className="bg-cyan-light p-3 lg:p-4 rounded">
                   <p className="text-2xl lg:text-3xl font-semibold text-dark -tracking-wider">
-                    {String(timeLeft.minutes).padStart(2, '0')}
+                    {String(timeLeft.minutes).padStart(2, "0")}
                   </p>
                 </div>
                 <div className="bg-cyan-light p-3 lg:p-4 rounded">
                   <p className="text-2xl lg:text-3xl font-semibold text-dark -tracking-wider">
-                    {String(timeLeft.seconds).padStart(2, '0')}
+                    {String(timeLeft.seconds).padStart(2, "0")}
                   </p>
                 </div>
               </div>
@@ -176,8 +207,11 @@ export default function HeroSection() {
                   <select className="w-full px-4 py-3 rounded-md bg-[#FAFAFA] border border-[#F2F2F2] text-[#333] font-medium appearance-none">
                     <option>Dịch vụ muốn đăng ký</option>
                   </select>
-                  <svg className="absolute right-4 top-1/2 -translate-y-1/2 w-3 h-3 fill-[#333]" viewBox="0 0 10 9">
-                    <path d="M4.94318 8.25L-0.00110563 -1.06691e-07L9.88746 8.77543e-07L4.94318 8.25Z"/>
+                  <svg
+                    className="absolute right-4 top-1/2 -translate-y-1/2 w-3 h-3 fill-[#333]"
+                    viewBox="0 0 10 9"
+                  >
+                    <path d="M4.94318 8.25L-0.00110563 -1.06691e-07L9.88746 8.77543e-07L4.94318 8.25Z" />
                   </svg>
                 </div>
                 <button
@@ -186,12 +220,24 @@ export default function HeroSection() {
                 >
                   Đặt lịch cho tôi
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M1 7.72656H15" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M9.27344 2L15.0007 7.72727L9.27344 13.4545" stroke="white" strokeWidth="1.27273" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path
+                      d="M1 7.72656H15"
+                      stroke="white"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M9.27344 2L15.0007 7.72727L9.27344 13.4545"
+                      stroke="white"
+                      strokeWidth="1.27273"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
                   </svg>
                 </button>
                 <p className="text-white/80 text-sm italic text-center px-4">
-                  (*) Chúng tôi sẽ liên hệ với bạn để đặt lịch tư vấn trong vòng 24 giờ tiếp theo
+                  (*) Chúng tôi sẽ liên hệ với bạn để đặt lịch tư vấn trong vòng
+                  24 giờ tiếp theo
                 </p>
               </form>
             </div>
