@@ -57,6 +57,37 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        teal: {
+          DEFAULT: "#00ACB8",
+          light: "#7FD5DB",
+          dark: "#008993",
+          50: "#E2F6FC",
+          100: "#CCEEF0",
+          200: "#66CDD4",
+          300: "#00CEE0",
+          400: "#00ACB8",
+          500: "#008993",
+          600: "#00565C",
+        },
+        cyan: {
+          bg: "#F4FBFB",
+          light: "#E2F6FC",
+        },
+        slate: {
+          text: "#0D0F2C",
+          700: "#3D3E56",
+          600: "#656C86",
+          500: "#616265",
+          400: "#525252",
+          300: "#B0B0B0",
+          200: "#E6E7E9",
+          100: "#F2F2F2",
+        },
+        dark: {
+          DEFAULT: "#001112",
+          light: "#002224",
+          footer: "#232B35",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -84,6 +115,10 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      backgroundImage: {
+        'gradient-teal': 'linear-gradient(90deg, #7FD5DB 0%, #00ACB8 50%, #008993 100%)',
+        'gradient-teal-vertical': 'linear-gradient(270deg, #00ACB8 0%, #7FD5DB 45.67%, #00ACB8 100%)',
       },
     },
   },
