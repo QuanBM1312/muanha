@@ -1,4 +1,53 @@
+import { useState } from "react";
+import { Button } from "./ui/button";
+import { Input } from "./ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "./ui/select";
+
 export default function RegistrationSection() {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    service: "Vé thường (1 buổi)",
+  });
+
+  const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const googleFormUrl =
+      "https://docs.google.com/forms/d/e/1FAIpQLSfmTWM0DS_BKl3-piwNc2HVc_GF4rZTya-GuSzBj5_fN-F75w/formResponse";
+    const formDataUrl = new URLSearchParams();
+
+    formDataUrl.append("entry.890595491", formData.name); // Họ và tên
+    formDataUrl.append("entry.792977596", formData.phone); // Số điện thoại
+    formDataUrl.append("entry.1205721405", formData.service); // Dịch vụ muốn đăng ký
+
+    try {
+      await fetch(googleFormUrl, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: formDataUrl.toString(),
+      });
+      alert("Cảm ơn bạn đã đăng ký! Chúng tôi sẽ liên hệ lại sớm.");
+      setFormData({
+        name: "",
+        phone: "",
+        service: "Vé thường (1 buổi)",
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Có lỗi xảy ra, vui lòng thử lại.");
+    }
+  };
+
   return (
     <section className="w-full py-16 lg:py-24 bg-cyan-bg">
       <div className="max-w-[1349px] mx-auto px-4 sm:px-6 lg:px-12">
@@ -14,7 +63,7 @@ export default function RegistrationSection() {
             <div className="space-y-8">
               <div className="space-y-6">
                 <img
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/8752e0cddcd2163508fa9b036ca8cfa6d85d2f78?width=398"
+                  src="/image 8.png"
                   alt="QR Code"
                   className="w-48 h-56 object-contain"
                 />
@@ -70,7 +119,7 @@ export default function RegistrationSection() {
                 </p>
               </div>
 
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleFormSubmit}>
                 <div className="space-y-2">
                   <label className="text-base font-semibold text-[#5B5B5B]">
                     Họ tên*
@@ -78,7 +127,10 @@ export default function RegistrationSection() {
                   <input
                     type="text"
                     placeholder="Nhập họ tên"
-                    className="w-full px-3 py-2.5 rounded-md bg-[#FAFAFA] border border-[#F2F2F2] text-[#B0B0B0] placeholder-[#B0B0B0] font-medium"
+                    className="w-full px-3 py-2.5 rounded-md bg-[#FAFAFA] border border-[#F2F2F2] text-[#333] placeholder-[#B0B0B0] font-medium"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    required
                   />
                 </div>
 
@@ -88,20 +140,29 @@ export default function RegistrationSection() {
                   </label>
                   <input
                     type="tel"
-                    placeholder="Nhập số điện thoại"
-                    className="w-full px-3 py-2.5 rounded-md bg-[#FAFAFA] border border-[#F2F2F2] text-[#B0B0B0] placeholder-[#B0B0B0] font-medium"
+                    placeholder="Số điện thoại"
+                    className="w-full px-4 py-3 rounded-md bg-[#FAFAFA] border border-[#F2F2F2] text-[#333] placeholder-[#B0B0B0] font-medium"
+                    pattern="0[0-9]{9}"
+                    title="Số điện thoại phải có 10 chữ số và bắt đầu bằng số 0."
+                    maxLength={10}
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    required
                   />
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-base font-semibold text-[#5B5B5B]">
-                    Gói đăng ký bạn quan tâm*
+                    Dịch vụ bạn muốn đăng ký*
                   </label>
                   <div className="relative">
-                    <select className="w-full px-3 py-2.5 rounded-md bg-[#FAFAFA] border border-[#F2F2F2] text-[#333] font-medium appearance-none">
-                      <option>Vé miễn phí</option>
-                      <option>Vé thường</option>
-                      <option>Vé VIP</option>
+                    <select className="w-full px-3 py-2.5 rounded-md bg-[#FAFAFA] border border-[#F2F2F2] text-[#333] font-medium appearance-none"
+                      value={formData.service}
+                      onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                      required
+                    >
+                      <option>Vé thường (1 buổi)</option>
+                      <option>Vé VIP (3 buổi)</option>
                     </select>
                     <svg
                       className="absolute right-3 top-1/2 -translate-y-1/2 w-3 h-3 fill-[#333] pointer-events-none"

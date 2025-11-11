@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import PaymentModal from "./PaymentModal";
 
 export default function HeroSection() {
   const [timeLeft, setTimeLeft] = useState({
@@ -7,6 +8,14 @@ export default function HeroSection() {
     minutes: 6,
     seconds: 9,
   });
+
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    service: "Vé thường (1 buổi)", // <-- Đã sửa giá trị mặc định
+  });
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -32,6 +41,40 @@ export default function HeroSection() {
 
     return () => clearInterval(timer);
   }, []);
+
+  // Hàm xử lý gửi dữ liệu đến Google Form
+  const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const googleFormUrl =
+      "https://docs.google.com/forms/d/e/1FAIpQLSfmTWM0DS_BKl3-piwNc2HVc_GF4rZTya-GuSzBj5_fN-F75w/formResponse";
+    const formDataUrl = new URLSearchParams();
+
+    formDataUrl.append("entry.890595491", formData.name); // Họ và tên
+    formDataUrl.append("entry.792977596", formData.phone); // Số điện thoại
+    formDataUrl.append("entry.1205721405", formData.service); // Dịch vụ muốn đăng ký
+
+    try {
+      await fetch(googleFormUrl, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: formDataUrl.toString(),
+      });
+      // Mở modal thay vì alert
+      setIsModalOpen(true);
+      setFormData({
+        name: "",
+        phone: "",
+        service: "Vé thường (1 buổi)", // <-- Đã sửa giá trị reset
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Có lỗi xảy ra, vui lòng thử lại.");
+    }
+  };
 
   return (
     <section className="relative w-full min-h-[784px] bg-[#E2F6FC] overflow-hidden">
@@ -86,23 +129,24 @@ export default function HeroSection() {
       </div>
 
       <div className="relative max-w-[1349px] mx-auto px-4 sm:px-6 lg:px-12 pt-32 pb-12 lg:pb-20">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
           {/* Left content */}
-          <div className="space-y-6 lg:space-y-8">
-            <div>
+          <div className="space-y-6 lg:space-y-8 lg:col-span-3 w-fit">
+            <div className="">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#3D3E56] leading-tight mb-4">
                 SIÊU ƯU ĐÃI
               </h1>
-              <div className="inline-block px-8 py-3 lg:px-10 lg:py-4 rounded-full bg-gradient-teal-vertical">
-                <h2 className="text-2xl sm:text-3xl font-bold text-white">
-                  TRẢI NGHIỆM
-                </h2>
+              <div className="flex items-center gap-2">
+                <div className="inline-block px-8 py-3 lg:px-10 lg:py-4 rounded-full bg-gradient-teal-vertical">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-white">
+                    TRẢI NGHIỆM
+                  </h2>
+                </div>
+                <p className="text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#0D0F2C]">
+                  TƯ VẤN MUA NHÀ 1:1
+                </p>
               </div>
-              <p className="text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#0D0F2C] mt-4">
-                TƯ VẤN MUA NHÀ 1:1
-              </p>
             </div>
-
             <div className="bg-white rounded-lg border border-teal p-6 lg:p-8 space-y-4">
               <p className="text-center text-lg font-semibold text-teal-200">
                 GIÁ TRẢI NGHIỆM CHỈ:
@@ -126,15 +170,7 @@ export default function HeroSection() {
                   </span>
                 </div>
               </div>
-              <div className="absolute top-6 right-6">
-                <img
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/a11f5018bd03e5088b8131e41753231f19bd0958?width=194"
-                  alt="Discount"
-                  className="w-20 h-20 lg:w-24 lg:h-24"
-                />
-              </div>
             </div>
-
             <div className="space-y-3">
               <button className="w-full bg-teal hover:bg-teal-dark transition-colors text-white font-medium text-lg lg:text-[23px] py-4 lg:py-4 rounded-full flex items-center justify-center gap-3 shadow-lg">
                 <img
@@ -151,7 +187,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right form */}
-          <div className="bg-dark rounded-lg overflow-hidden">
+          <div className="bg-dark rounded-lg overflow-hidden lg:col-span-2">
             <div className="bg-dark p-6 lg:p-8 text-center">
               <h3 className="text-white text-lg lg:text-xl font-bold mb-2">
                 NHANH TAY ĐĂNG KÝ
@@ -192,20 +228,36 @@ export default function HeroSection() {
                 <span>Giây</span>
               </div>
 
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={handleFormSubmit}>
                 <input
                   type="text"
-                  placeholder="Họ tên"
-                  className="w-full px-4 py-3 rounded-md bg-[#FAFAFA] border border-[#F2F2F2] text-[#333] placeholder-[#333] font-medium"
+                  placeholder="Họ và tên"
+                  className="w-full px-4 py-3 rounded-md bg-[#FAFAFA] border border-[#F2F2F2] text-[#333] placeholder-[#B0B0B0] font-medium"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  required
                 />
                 <input
                   type="tel"
                   placeholder="Số điện thoại"
-                  className="w-full px-4 py-3 rounded-md bg-[#FAFAFA] border border-[#F2F2F2] text-[#333] placeholder-[#333] font-medium"
+                  className="w-full px-4 py-3 rounded-md bg-[#FAFAFA] border border-[#F2F2F2] text-[#333] placeholder-[#B0B0B0] font-medium"
+                  pattern="0[0-9]{9}"
+                  title="Số điện thoại phải có 10 chữ số và bắt đầu bằng số 0."
+                  maxLength={10}
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  required
                 />
                 <div className="relative">
-                  <select className="w-full px-4 py-3 rounded-md bg-[#FAFAFA] border border-[#F2F2F2] text-[#333] font-medium appearance-none">
-                    <option>Dịch vụ muốn đăng ký</option>
+                  <select
+                    className="w-full px-4 py-3 rounded-md bg-[#FAFAFA] border border-[#F2F2F2] text-[#333] font-medium appearance-none"
+                    value={formData.service}
+                    onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                    required
+                  >
+                    {/* Đã sửa giá trị các option */}
+                    <option>Vé thường (1 buổi)</option>
+                    <option>Vé VIP (3 buổi)</option>
                   </select>
                   <svg
                     className="absolute right-4 top-1/2 -translate-y-1/2 w-3 h-3 fill-[#333]"
@@ -244,6 +296,8 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
+
+      {isModalOpen && <PaymentModal onClose={() => setIsModalOpen(false)} />}
     </section>
   );
 }
