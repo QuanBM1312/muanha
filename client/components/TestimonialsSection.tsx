@@ -79,34 +79,6 @@ export default function TestimonialsSection() {
             ))}
           </div>
 
-          <div className="flex justify-center items-center gap-4 mt-8">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path
-                d="M8 14L2 8L8 2"
-                stroke="#00ACB8"
-                strokeWidth="4"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-            <div className="flex gap-6">
-              <div className="w-2.5 h-2.5 rounded-full bg-[#C7C7C7]"></div>
-              <div className="w-2.5 h-2.5 rounded-full bg-teal"></div>
-              <div className="w-2.5 h-2.5 rounded-full bg-[#C7C7C7]"></div>
-              <div className="w-2.5 h-2.5 rounded-full bg-[#C7C7C7]"></div>
-              <div className="w-2.5 h-2.5 rounded-full bg-[#C7C7C7]"></div>
-              <div className="w-2.5 h-2.5 rounded-full bg-[#C7C7C7]"></div>
-            </div>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path
-                d="M8 2L14 8L8 14"
-                stroke="#00ACB8"
-                strokeWidth="4"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
         </div>
       </div>
     </section>
