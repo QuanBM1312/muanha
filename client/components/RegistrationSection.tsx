@@ -49,7 +49,7 @@ export default function RegistrationSection() {
   };
 
   return (
-    <section className="w-full py-16 lg:py-24 bg-cyan-bg">
+    <section id="dang-ky" className="w-full py-16 lg:py-24 bg-cyan-bg">
       <div className="max-w-[1349px] mx-auto px-4 sm:px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left: Payment Info */}

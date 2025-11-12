@@ -1,12 +1,18 @@
 export default function Footer() {
-  const companyLinks = ["Về chúng tôi", "Blog", "Liên hệ"];
-  const individualLinks = [
-    "Đồng hành và Tư vấn Mua nhà",
-    "Đồng hành và Tư vấn Đầu tư",
-    "Thư viện tài chính cá nhân",
-    "Thư viện phân tích chứng khoán",
+  const companyLinks = [
+    { text: "Về chúng tôi", href: "#" },
+    { text: "Blog", href: "#" },
+    { text: "Liên hệ", href: "#" },
   ];
-  const organizationLinks = ["Thiết kế nội dung giáo dục tài chính"];
+  const individualLinks = [
+    { text: "Đồng hành và Tư vấn Mua nhà", href: "#" },
+    { text: "Đồng hành và Tư vấn Đầu tư", href: "https://tuvandautu.finful.co/" },
+    { text: "Thư viện tài chính cá nhân", href: "https://app.finful.co/sign-in?redirect_url=https%3A%2F%2Fapp.finful.co%2Fcourse%2F65fb0e91feebb569c2191340%3Ffbclid%3DIwY2xjawGXuQ9leHRuA2FlbQIxMAABHQz4oKhOcoGY-vfIIYNQ0Bi8Grznu_ZpfIf_M0V_mZ5CF8qkodGIA2rAcQ_aem_ZUu0TxwVY7QuOmaOqMPvDA" },
+    { text: "Thư viện phân tích chứng khoán", href: "https://global.finful.co/sign-in?redirect_url=https%3A%2F%2Fglobal.finful.co%2Fcourse%2F654b4b6c919baafbb5c4e975%3Ffbclid%3DIwY2xjawGXuPtleHRuA2FlbQIxMAABHVmJVUh1h6PjYXMWcGrc4Rk4_QmPn22qZimfZLo3aj_a-POutj-ma8d90w_aem_j78gg5nee3mqU6GYcU4ItA" },
+  ];
+  const organizationLinks = [
+    { text: "Thiết kế nội dung giáo dục tài chính", href: "#" },
+  ];
 
   const partnerLogos = [
     "https://api.builder.io/api/v1/image/assets/TEMP/f5d1447d7223c864db34e3d50adcb583643f4e00?width=694",
@@ -92,10 +98,10 @@ export default function Footer() {
                 {companyLinks.map((link, index) => (
                   <li key={index}>
                     <a
-                      href="#"
+                      href={link.href}
                       className="text-sm hover:text-teal transition-colors"
                     >
-                      {link}
+                      {link.text}
                     </a>
                   </li>
                 ))}
@@ -111,10 +117,10 @@ export default function Footer() {
                 {individualLinks.map((link, index) => (
                   <li key={index}>
                     <a
-                      href="#"
+                      href={link.href}
                       className="text-sm hover:text-teal transition-colors"
                     >
-                      {link}
+                      {link.text}
                     </a>
                   </li>
                 ))}
@@ -130,10 +136,10 @@ export default function Footer() {
                 {organizationLinks.map((link, index) => (
                   <li key={index}>
                     <a
-                      href="#"
+                      href={link.href}
                       className="text-sm hover:text-teal transition-colors"
                     >
-                      {link}
+                      {link.text}
                     </a>
                   </li>
                 ))}

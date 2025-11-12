@@ -47,12 +47,12 @@ export default function HeroSection() {
     event.preventDefault();
 
     const googleFormUrl =
-      "https://docs.google.com/forms/d/e/1FAIpQLSfmTWM0DS_BKl3-piwNc2HVc_GF4rZTya-GuSzBj5_fN-F75w/formResponse";
+      "https://docs.google.com/forms/d/e/1FAIpQLSd8IQ7fHHoA06i9XG-O5su4gUSKNoDB5YY7F5JmIXU-d8xXIA/formResponse";
     const formDataUrl = new URLSearchParams();
 
-    formDataUrl.append("entry.890595491", formData.name); // Họ và tên
-    formDataUrl.append("entry.792977596", formData.phone); // Số điện thoại
-    formDataUrl.append("entry.1205721405", formData.service); // Dịch vụ muốn đăng ký
+    formDataUrl.append("entry.2120993187", formData.name); // Họ và tên
+    formDataUrl.append("entry.1471538822", formData.phone); // Số điện thoại
+    formDataUrl.append("entry.1435946775", formData.service); // Dịch vụ muốn đăng ký
 
     try {
       await fetch(googleFormUrl, {
@@ -143,7 +143,7 @@ export default function HeroSection() {
                   </h2>
                 </div>
                 <p className="text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#0D0F2C]">
-                  TƯ VẤN MUA NHÀ 1:1
+                  TƯ VẤN ĐẦU TƯ 1:1
                 </p>
               </div>
             </div>
@@ -172,15 +172,15 @@ export default function HeroSection() {
               </div>
             </div>
             <div className="space-y-3">
-              <button className="w-full bg-teal hover:bg-teal-dark transition-colors text-white font-medium text-lg lg:text-[23px] py-4 lg:py-4 rounded-full flex items-center justify-center gap-3 shadow-lg">
+              <button onClick={() => window.open("https://business.facebook.com/latest/inbox/all/?nav_ref=manage_page_ap_plus_inbox_message_button&asset_id=109065508625040", "_blank")} className="w-full bg-teal hover:bg-teal-dark transition-colors text-white font-medium text-lg lg:text-[23px] py-4 lg:py-4 rounded-full flex items-center justify-center gap-3 shadow-lg">
                 <img
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/a6276b7af3426123598aadf0e2d9328f31774f51?width=66"
+                  src="image 27.png"
                   alt="Zalo"
                   className="w-7 h-7"
                 />
-                Tư vấn và Đặt lịch qua Zalo
+                Tư vấn và Đặt lịch
               </button>
-              <button className="w-full bg-white hover:bg-gray-50 transition-colors text-[#333] font-medium text-lg lg:text-[23px] py-4 lg:py-4 rounded-full border border-teal">
+              <button onClick={() => window.open("https://quatang.finful.co/", "_blank")} className="w-full bg-white hover:bg-gray-50 transition-colors text-[#333] font-medium text-lg lg:text-[23px] py-4 lg:py-4 rounded-full border border-teal">
                 Nhận quà miễn phí trước
               </button>
             </div>

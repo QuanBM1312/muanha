@@ -126,7 +126,7 @@ export default function PricingSection() {
                 ))}
               </div>
 
-              <button className="w-full py-4 lg:py-5 border border-teal rounded-xl text-[#1B223C] text-xl lg:text-2xl hover:bg-teal hover:text-white transition-colors">
+              <button onClick={() => window.location.href = "#dang-ky"} className="w-full py-4 lg:py-5 border border-teal rounded-xl text-[#1B223C] text-xl lg:text-2xl hover:bg-teal hover:text-white transition-colors">
                 Đăng ký
               </button>
             </div>

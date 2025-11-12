@@ -92,8 +92,7 @@ export default function PaymentModal({ onClose }: PaymentModalProps) {
                 ></path>
               </svg>
               <p className="text-sm text-left">
-                Mọi thông tin cá nhân của Quý khách đều được bảo mật bởi
-                Finful, không chia sẻ cho bất kỳ bên thứ ba nào khác.
+                Sau khi xác nhận thanh toán, chúng tôi sẽ liên hệ với bạn để đặt lịch tư vấn trong vòng 24 giờ tiếp theo
               </p>
             </div>
           </div>

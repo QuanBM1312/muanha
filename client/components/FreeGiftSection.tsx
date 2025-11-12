@@ -24,7 +24,7 @@ export default function FreeGiftSection() {
             rõ ràng nhất.
           </p>
 
-          <button className="px-12 lg:px-16 py-4 lg:py-5 bg-teal hover:bg-teal-dark transition-colors text-white text-xl lg:text-2xl font-medium rounded-full">
+          <button onClick={() => window.open("https://quatang.finful.co/", "_blank")} className="px-12 lg:px-16 py-4 lg:py-5 bg-teal hover:bg-teal-dark transition-colors text-white text-xl lg:text-2xl font-medium rounded-full">
             Nhận quà miễn phí
           </button>
         </div>

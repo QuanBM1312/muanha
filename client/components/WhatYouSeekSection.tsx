@@ -16,9 +16,9 @@ export default function WhatYouSeekSection() {
               Bạn không chỉ tìm kiếm “một căn nhà”, bạn tìm:
             </p>
             <div className="mt-12">
-              <button className="bg-teal px-5 hover:bg-teal-dark transition-colors text-white font-semibold text-lg lg:text-[23px] py-4 lg:py-4 rounded-full flex items-center justify-center gap-3 shadow-lg">
+              <a href="#dang-ky" className="bg-teal px-5 hover:bg-teal-dark transition-colors text-white font-semibold text-lg lg:text-[23px] py-4 lg:py-4 rounded-full flex items-center justify-center gap-3 shadow-lg">
                 Nhận ngay →
-              </button>
+              </a>
             </div>
           </div>
 
