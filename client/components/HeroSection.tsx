@@ -75,6 +75,23 @@ export default function HeroSection() {
       alert("Có lỗi xảy ra, vui lòng thử lại.");
     }
   };
+  
+  const handleMessengerClick = () => {
+    const pageId = "109065508625040";
+    const messengerDesktopUrl = `https://www.messenger.com/t/${pageId}`;
+    const messengerAppUrl = `fb-messenger://user-thread/${pageId}`;
+
+    // Kiểm tra xem người dùng có trên thiết bị di động không
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    ) {
+      window.location.href = messengerAppUrl;
+    } else {
+      window.open(messengerDesktopUrl, "_blank");
+    }
+  };
 
   return (
     <section className="relative w-full min-h-[784px] bg-[#E2F6FC] overflow-hidden">
@@ -172,7 +189,10 @@ export default function HeroSection() {
               </div>
             </div>
             <div className="space-y-3">
-              <button onClick={() => window.open("https://www.messenger.com/login.php?next=https%3A%2F%2Fwww.messenger.com%2Ft%2F109065508625040%2F%3Fmessaging_source%3Dsource%253Apages%253Amessage_shortlink%26source_id%3D1441792%26recurring_notification%3D0", "_blank")} className="w-full bg-teal hover:bg-teal-dark transition-colors text-white font-medium text-lg lg:text-[23px] py-4 lg:py-4 rounded-full flex items-center justify-center gap-3 shadow-lg">
+              <button 
+                onClick={handleMessengerClick} 
+                className="w-full bg-teal hover:bg-teal-dark transition-colors text-white font-medium text-lg lg:text-[23px] py-4 lg:py-4 rounded-full flex items-center justify-center gap-3 shadow-lg"
+              >
                 <img
                   src="image 27.png"
                   alt="Zalo"
