@@ -26,13 +26,13 @@ export default function ProblemsSection() {
     <section className="w-full py-16 lg:py-24 bg-white">
       <div className="max-w-[1349px] mx-auto px-4 sm:px-6 lg:px-12">
         <div className="text-center mb-12 lg:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#0D0F2C] -tracking-wider mb-2">
+          <h2 className="text-4xl lg:text-5xl font-semibold text-[#0D0F2C] -tracking-wider mb-2">
             Bạn muốn{" "}
             <span className="bg-gradient-teal bg-clip-text text-transparent">
               mua nhà
             </span>
           </h2>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold -tracking-wider">
+          <h2 className="text-4xl lg:text-5xl font-semibold -tracking-wider">
             <span className="text-[#0D0F2C]">nhưng gặp không ít </span>
             <span className="bg-gradient-teal bg-clip-text text-transparent">
               trở ngại

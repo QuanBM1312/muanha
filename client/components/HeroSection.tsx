@@ -138,12 +138,12 @@ export default function HeroSection() {
               </h1>
               <div className="flex items-center gap-2">
                 <div className="inline-block px-8 py-3 lg:px-10 lg:py-4 rounded-full bg-gradient-teal-vertical">
-                  <h2 className="text-2xl sm:text-3xl font-bold text-white">
+                  <h2 className="text-md sm:text-3xl font-semibold text-white">
                     TRẢI NGHIỆM
                   </h2>
                 </div>
-                <p className="text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#0D0F2C]">
-                  TƯ VẤN ĐẦU TƯ 1:1
+                <p className="text-md sm:text-3xl lg:text-[34px] font-semibold text-[#0D0F2C]">
+                  TƯ VẤN MUA NHÀ 1:1
                 </p>
               </div>
             </div>
@@ -172,7 +172,7 @@ export default function HeroSection() {
               </div>
             </div>
             <div className="space-y-3">
-              <button onClick={() => window.open("https://business.facebook.com/latest/inbox/all/?nav_ref=manage_page_ap_plus_inbox_message_button&asset_id=109065508625040", "_blank")} className="w-full bg-teal hover:bg-teal-dark transition-colors text-white font-medium text-lg lg:text-[23px] py-4 lg:py-4 rounded-full flex items-center justify-center gap-3 shadow-lg">
+              <button onClick={() => window.open("https://www.messenger.com/login.php?next=https%3A%2F%2Fwww.messenger.com%2Ft%2F109065508625040%2F%3Fmessaging_source%3Dsource%253Apages%253Amessage_shortlink%26source_id%3D1441792%26recurring_notification%3D0", "_blank")} className="w-full bg-teal hover:bg-teal-dark transition-colors text-white font-medium text-lg lg:text-[23px] py-4 lg:py-4 rounded-full flex items-center justify-center gap-3 shadow-lg">
                 <img
                   src="image 27.png"
                   alt="Zalo"

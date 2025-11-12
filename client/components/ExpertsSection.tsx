@@ -71,10 +71,10 @@ export default function ExpertsSection() {
     <section className="py-20 px-6 lg:px-12">
       <div className="max-w-screen-xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-[50px] font-bold text-finful-text-dark mb-5 tracking-tight">
+          <h2 className="text-4xl lg:text-[50px] font-bold text-finful-text-dark mb-5 tracking-tight">
             Sự hỗ trợ của các chuyên gia
           </h2>
-          <p className="text-lg text-finful-text max-w-3xl mx-auto">
+          <p className="text-md lg:text-lg text-finful-text max-w-3xl mx-auto">
             Chúng tôi làm việc cùng các chuyên gia dày dặn kinh nghiệm trong ngành tài chính, đã thành công tư vấn và đồng hành cùng hàng ngàn người dùng          
           </p>
         </div>

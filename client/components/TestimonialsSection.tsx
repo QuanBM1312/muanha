@@ -24,10 +24,10 @@ export default function TestimonialsSection() {
     <section className="w-full py-16 lg:py-24 bg-white">
       <div className="max-w-[1349px] mx-auto px-4 sm:px-6 lg:px-12">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#0D0F2C] -tracking-tight mb-2">
+          <h2 className="text-xl sm:text-4xl lg:text-5xl font-semibold text-[#0D0F2C] -tracking-tight mb-2">
             Khách hàng của chúng tôi đã
           </h2>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold -tracking-tight bg-gradient-teal bg-clip-text text-transparent">
+          <h2 className="text-xl sm:text-4xl lg:text-5xl font-semibold -tracking-tight bg-gradient-teal bg-clip-text text-transparent">
             thành công "an cư lạc nghiệp"
           </h2>
         </div>
@@ -46,10 +46,10 @@ export default function TestimonialsSection() {
                     className="w-16 h-16 lg:w-[67px] lg:h-[67px] rounded-full object-cover"
                   />
                   <div>
-                    <h3 className="text-lg lg:text-xl font-bold text-[#333]">
+                    <h3 className="text-sm lg:text-xl font-bold text-[#333]">
                       {testimonial.name}
                     </h3>
-                    <p className="text-base text-[#525252]">
+                    <p className="text-sm lg:text-base text-[#525252]">
                       {testimonial.occupation}
                     </p>
                   </div>
